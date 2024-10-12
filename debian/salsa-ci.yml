@@ -1,0 +1,8 @@
+---
+include:
+  - https://salsa.debian.org/salsa-ci-team/pipeline/raw/master/recipes/debian.yml
+  - https://salsa.debian.org/jas/pipeline-wrap-and-sort/raw/main/wrap-and-sort.yml
+  - https://salsa.debian.org/debian/licenserecon/raw/main/debian/licenserecon.yml
+
+variables:
+  SALSA_CI_DISABLE_APTLY: 0
