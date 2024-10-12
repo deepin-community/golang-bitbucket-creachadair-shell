@@ -1,5 +1,12 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-bitbucket-creachadair-shell (0.0.8-2) unstable; urgency=medium
 
-  * Initial release
+  * Team upload.
+  * No change rebuild for testing migration
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Reinhard Tartler <siretart@tauware.de>  Sun, 23 Jun 2024 15:49:44 -0400
+
+golang-bitbucket-creachadair-shell (0.0.8-1) unstable; urgency=medium
+
+  * Initial release (Closes: #1060852)
+
+ -- Simon Josefsson <simon@josefsson.org>  Mon, 15 Jan 2024 18:13:13 +0100

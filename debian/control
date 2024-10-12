@@ -1,15 +1,35 @@
-Source: template-repository
-Section: unknown
+Source: golang-bitbucket-creachadair-shell
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Uploaders:
+ Simon Josefsson <simon@josefsson.org>,
+Section: golang
+Testsuite: autopkgtest-pkg-go
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-golang,
+ golang-any,
+ golang-github-google-go-cmp-dev,
+Standards-Version: 4.6.2
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-bitbucket-creachadair-shell
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-bitbucket-creachadair-shell.git
+Homepage: https://bitbucket.org/creachadair/shell/
+Rules-Requires-Root: no
+XS-Go-Import-Path: bitbucket.org/creachadair/shell
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: golang-bitbucket-creachadair-shell-dev
+Architecture: all
+Multi-Arch: foreign
+Depends:
+ golang-github-google-go-cmp-dev,
+ ${misc:Depends},
+Description: implements basic shell command-line splitting for Go (library)
+ Provides supports for splitting and joining of shell command strings.
+ .
+ The Split function divides a string into whitespace-separated fields,
+ respecting single and double quotation marks as defined by the Shell Command
+ Language section of IEEE Std 1003.1 2013.  The Quote function quotes
+ characters that would otherwise be subject to shell evaluation, and the Join
+ function concatenates quoted strings with spaces between them.
+ .
+ This package contains the library.
